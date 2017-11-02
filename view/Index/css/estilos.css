@@ -1,0 +1,76 @@
+/* elimina todas las margenes por dafecto que coloca el navegador*/
+/* Dieseno adaptable para dispositivos movibles*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e6e6e6;
+}
+
+/*Para fijar el tamano*/
+header, .main, footer {
+  /*background: #fff;*/
+  width:90%;
+  max-width: 1000px;
+  margin:20px auto; /*es para colocar los espacios tanto arriba como abajo*/
+}
+
+header nav {
+  background: #528FD5;
+  overflow: hidden; /* esto soluciona float:left que elimina la configuracion */
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  /*para que todos se apilen a la izquierda*/
+  float:left;
+}
+
+/*para modificas los enlaces*/
+header nav ul li a{
+  padding: 10px 20px;
+  /*hace que el pading haga espacio arriba y abajo*/
+  display: block;
+  /*cambiando a color blanco*/
+  color: #fff;
+  text-decoration: none;
+}
+
+/*para cambiar el fondo cuando el mouse pase por el menu */
+header nav ul li a:hover {
+  background: #75ACEC;
+}
+
+/* trabajando con la seccion */
+.main .articles {
+  width: 68.5%;
+  margin-right: 1.5%;
+  float:left;
+  /*background: #fff;*/
+}
+
+.main .articles article {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+aside {
+  width: 30%;
+  background: #ff8000;
+  float:left;
+  padding: 20px;
+  box-sizing:border-box;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  clear:both;/*hace que se limpie los float:left */
+  padding: 10px 0px;
+  text-align: center;
+}
