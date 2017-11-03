@@ -270,7 +270,7 @@ class MenuAdministradorControlador
 
 					
 
-					if ($manejadorEvento->registrarEvento($evento))
+					if ($manejadorInscripcion->registrarInscripcion($inscripcion))
 					{
 						echo "Exito";
 					}

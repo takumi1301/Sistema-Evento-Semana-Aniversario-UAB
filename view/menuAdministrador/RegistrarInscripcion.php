@@ -24,7 +24,7 @@ $listaDeParticipantes = $objetoParticipanteController->listaDeParticipantes();
 
  ?>
 
-
+<script type="text/javascript" src="../Index/js/RegistrarInscripcionAjax.js"></script>
   <div id="exitoRegistrarInscripcion" style="display: none"></div>
   <div id="errorRegistrarInscripcion" style="display: none"></div>
 
