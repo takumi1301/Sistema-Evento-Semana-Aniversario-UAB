@@ -127,5 +127,9 @@ asistencia boolean null,
 foreign key(idInscripcion) references inscripcion(idInscripcion) on update cascade on delete cascade,
 foreign key(idActividad) references actividad(idActividad) on update cascade on delete cascade);
 
-
+create table preInscripcion(
+idPreInscripcion int unsigned not null auto_increment primary key,
+idEvento int unsigned not null,
+idParticipante int unsigned not null,
+montoTotal Double not null);
 

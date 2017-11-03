@@ -243,6 +243,51 @@ class MenuAdministradorControlador
 
 
 
+ case 'registrarInscripcion':
+		        include 'cabecera.php';
+		        include 'RegistrarInscripcion.php';
+		        include 'pies.php';
+            break;	
+
+
+			case 'insertarInscripcion':
+				  	require ("../../model/Conexion.php");
+					require ("../../model/InscripcionModel.php");
+					require ("../../model/ManejadorInscripcion.php");
+
+				    $conexion = new Conexion();
+					$inscripcion = new InscripcionModel();
+					$manejadorInscripcion = new ManejadorInscripcion($conexion);
+
+					$inscripcion->idEvento = $_POST["idEvento"];
+					$inscripcion->idParticipante = $_POST["idParticipante"];
+					$inscripcion->idPaquete = $_POST["idPaquete"];
+					$inscripcion->fechaHoraInscripcion = $_POST["fechaHoraInscripcion"];
+					$inscripcion->montoTotal = $_POST["montoTotal"];
+					$inscripcion->fueValidado = $_POST["fueValidado"];
+					$inscripcion->horaFechaValidacion = $_POST["horaFechaValidacion"];
+					$inscripcion->idUsuario = $_POST["idUsuario"];
+
+					
+
+					if ($manejadorEvento->registrarEvento($evento))
+					{
+						echo "Exito";
+					}
+					else
+					{
+						echo "Error";
+					}
+			break;
+
+
+
+
+
+
+
+
+
 
 
 

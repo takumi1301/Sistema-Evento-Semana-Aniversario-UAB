@@ -84,6 +84,16 @@ if(isset($_SESSION['nombre'])){
                   </li>
 
 
+                   <li><a href="#">Inscripcion</a>
+                      <ul>
+                        
+                        <li><a href="index.php?modo=registrarInscripcion">Registrar Inscripciones</a></li>
+                        <li><a href="index.php?modo=listaDeInscripcioness">Listar Inscripciones</a></li>
+                      </ul>
+                  </li>
+
+
+
                  
                   <li><a href="#">Bienvenido: <?php echo $usuario?></a></li>
                   <li><a href="index.php?modo=salir">Salir</a></li>

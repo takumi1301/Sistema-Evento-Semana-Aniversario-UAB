@@ -17,6 +17,7 @@ function registrarParticipante() {
         {
           $('#exitoRegistrarParticipante').html("Exito al registrar los datos del Participante");
           $('#exitoRegistrarParticipante').show();
+           window.location.href = "index.php?modo=listaDeParticipantes";
         }
         else
         {

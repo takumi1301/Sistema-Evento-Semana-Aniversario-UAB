@@ -69,6 +69,37 @@ class ManejadorParticipante
 
 
 
+			public function devolverDatosParticipante($idParticipante)
+		{
+			$consultaDatosParticipante = "SELECT primerNombre,primerApellido FROM participante WHERE idParticipante = :idParticipante;";
+			$consultaDatosParticipante = $this->Conexion->prepare($consultaDatosParticipante);
+			$consultaDatosParticipante->bindParam(":idParticipante",$idParticipante); //vincula un parametro con una variable
+			$consultaDatosParticipante->execute();
+			$resultadoDatosParticipante = $consultaDatosParticipante->fetchAll();
+
+			return $resultadoDatosParticipante;
+		}
+
+
+		public function listaDeParticipantes(){
+		    $consultaListaDeParticipantes = "SELECT idParticipante,edadParticipante,sexoParticipante, ciParticipante,segundoNombre,segundoApellido,paisProcedencia,ciudadProcedencia,promocionUAB,tallaPolera,estudioUAB,telefonoParticipante,correoParticipante, primerNombre,primerApellido
+				                       FROM participante
+				                       ORDER BY primerNombre;";
+		    $consultaListaDeParticipantes = $this->Conexion->prepare($consultaListaDeParticipantes);
+		    $consultaListaDeParticipantes->execute();
+		    $resultadoListaDeParticipantes = $consultaListaDeParticipantes->fetchAll();
+		    return $resultadoListaDeParticipantes;
+		}//end function
+
+
+
+
+
+
+
+
+
+
 }
 	
 

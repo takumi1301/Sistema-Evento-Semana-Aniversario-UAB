@@ -1,6 +1,6 @@
 <?php
   $idUsuario = $_SESSION['idUsuario'];
- // echo "usuario:......".$idUsuario;
+ //echo "usuario:......".$idUsuario;
 
 ?>
 <!DOCTYPE html>

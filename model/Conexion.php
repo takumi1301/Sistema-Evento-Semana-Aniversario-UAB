@@ -5,7 +5,7 @@ class Conexion extends PDO {
    private $host = 'localhost';
    private $nombreBaseDato = 'aniversariobd';
    private $login = 'root';
-   private $password = '';
+   private $password = '142536';
 
    public function __construct() {
       try{
